@@ -1,0 +1,8 @@
+{
+  "name": "LocalMark - Marketplace Omnichannel",
+  "description": "A comprehensive local marketplace platform for sellers to list products and buyers to purchase securely with integrated AI product descriptions and smart search.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
