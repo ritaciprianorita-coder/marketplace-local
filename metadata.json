@@ -1,6 +1,6 @@
 {
-  "name": "LocalMark - Marketplace Omnichannel",
-  "description": "A comprehensive local marketplace platform for sellers to list products and buyers to purchase securely with integrated AI product descriptions and smart search.",
+  "name": "AcheiAqui - Marketplace Local",
+  "description": "Uma plataforma abrangente para vendedores locais listarem produtos e compradores comprarem com segurança, com descrições inteligentes por IA e busca avançada.",
   "requestFramePermissions": [
     "camera",
     "microphone"

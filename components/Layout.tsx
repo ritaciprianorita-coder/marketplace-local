@@ -26,9 +26,9 @@ const Layout: React.FC<LayoutProps> = ({ children, activePage, onNavigate }) => 
             </button>
             <h1 
               onClick={() => onNavigate('home')} 
-              className="text-2xl font-bold text-orange-600 cursor-pointer flex items-center gap-2"
+              className="text-2xl font-bold text-orange-600 cursor-pointer flex items-center gap-1"
             >
-              Local<span className="text-gray-900">Mark</span>
+              Achei<span className="text-gray-900">Aqui</span>
             </h1>
           </div>
 
@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activePage, onNavigate }) => 
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input 
                 type="text" 
-                placeholder="Procurar produtos..." 
+                placeholder="O que você procura?" 
                 className="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
               />
             </div>
@@ -117,8 +117,8 @@ const Layout: React.FC<LayoutProps> = ({ children, activePage, onNavigate }) => 
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">LocalMark</h3>
-            <p className="text-sm">O maior marketplace local, conectando vendedores e compradores com confiança.</p>
+            <h3 className="text-white text-xl font-bold mb-4">AcheiAqui</h3>
+            <p className="text-sm">O marketplace oficial de serviços e produtos locais, conectando Angola com confiança.</p>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">Empresa</h4>
@@ -145,7 +145,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activePage, onNavigate }) => 
           </div>
         </div>
         <div className="container mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-xs">
-          © 2024 LocalMark. Todos os direitos reservados.
+          © 2024 AcheiAqui. Todos os direitos reservados.
         </div>
       </footer>
     </div>

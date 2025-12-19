@@ -1,8 +1,9 @@
+
 {
-  "name": "localmark---marketplace-omnichannel",
-  "private": true,
-  "version": "0.0.0",
+  "name": "acheiaqui-ao",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Plataforma de serviços e marketplace local",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,9 +17,7 @@
     "recharts": "^3.6.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "vite": "^6.0.0",
+    "typescript": "^5.0.0"
   }
 }
