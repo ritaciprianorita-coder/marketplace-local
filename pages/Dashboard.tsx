@@ -22,6 +22,9 @@ const MOCK_STATS = [
   { name: 'Dom', sales: 3490 },
 ];
 
+const chartTickStyle = { fill: '#9ca3af', fontSize: 12 };
+const tooltipContentStyle = { borderRadius: '16px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' };
+
 const Dashboard: React.FC = () => {
   const { user, products, addProduct, updateProduct } = useApp();
   const [showAddModal, setShowAddModal] = useState(false);
@@ -78,7 +81,6 @@ const Dashboard: React.FC = () => {
         </button>
       </div>
 
-      {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
         <StatCard icon={<TrendingUp className="text-green-600" />} label="Vendas Totais" value="450.000 Kz" change="+12.5%" />
         <StatCard icon={<ShoppingCart className="text-blue-600" />} label="Encomendas" value="24" change="+5" />
@@ -87,7 +89,6 @@ const Dashboard: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
-        {/* Chart */}
         <div className="lg:col-span-2 bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
           <h3 className="text-xl font-bold mb-6">Desempenho Semanal</h3>
           <div className="h-80">
@@ -100,18 +101,15 @@ const Dashboard: React.FC = () => {
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f3f4f6" />
-                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{fill: '#9ca3af', fontSize: 12}} />
-                <YAxis axisLine={false} tickLine={false} tick={{fill: '#9ca3af', fontSize: 12}} />
-                <Tooltip 
-                  contentStyle={{borderRadius: '16px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)'}} 
-                />
+                <XAxis dataKey="name" axisLine={false} tickLine={false} tick={chartTickStyle} />
+                <YAxis axisLine={false} tickLine={false} tick={chartTickStyle} />
+                <Tooltip contentStyle={tooltipContentStyle} />
                 <Area type="monotone" dataKey="sales" stroke="#ea580c" strokeWidth={3} fillOpacity={1} fill="url(#colorSales)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
         </div>
 
-        {/* Recent Orders */}
         <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
           <h3 className="text-xl font-bold mb-6">Encomendas Recentes</h3>
           <div className="space-y-4">
@@ -126,7 +124,6 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Product Management */}
       <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
           <h3 className="text-xl font-bold">Gerir Produtos</h3>
@@ -176,7 +173,6 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* Add Product Modal */}
       {showAddModal && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setShowAddModal(false)}></div>
